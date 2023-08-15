@@ -1,0 +1,519 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+    text-transform:capitalize;
+  }
+  
+  /* nav styles */
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color:white ;
+    position: fixed;
+    width: 100%;
+    margin-top: -60px;
+    box-shadow: 0px 15px 20px whitesmoke;
+    font-family: 'Nunito', sans-serif;
+
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: black;
+    padding-left: 60px;
+  }
+  
+  .hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+  }
+  
+  .nav__link {
+    position: fixed;
+    width: 100%;
+    top: 5rem;
+    background-color: whitesmoke;
+    
+  }
+  
+  .nav__link a {
+    display: block;
+    text-align: start;
+    padding: 10px 0;
+    transition: 0.5s ease;
+    margin-left: 15px;
+    
+  
+  }
+  
+  .nav__link a:hover {
+    color: gray;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .nav__link {
+      display: block;
+      position: static;
+      width: auto;
+      margin-right: 20px;
+      background: none;
+    }
+  
+    .nav__link a {
+      display: inline-block;
+      padding: 15px 20px;
+      
+    }
+  
+    .hamburger {
+      display: none;
+    }
+    .logo {
+      margin-left: -30px;
+    }
+    
+  }
+  @media screen and (min-width: 1100px){
+    .logo{
+      margin-left: -30px;
+      transition: 0.2s;
+    }
+  }
+  
+  .main-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 60px;
+  }
+  
+  .main-text {
+      flex: 1;
+      padding: 20px;
+      margin-top: 120px;
+      font-family: 'Nunito', sans-serif;
+
+  }
+  .main-text h5{
+    font-size: 20px;
+  }
+  .main-text h1{
+    font-size: 40px;
+  }
+  .main-image {
+      flex: 1;
+      padding: 20px;
+      text-align: right;
+      margin-top: 120px;
+  }
+  
+  .main-image img {
+      max-width: 100%;
+      height: auto;
+  }
+  .main-text button{
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 1s ease;
+  }
+
+  button:hover{
+    color: white;
+    background-color: black;
+  }
+  
+  
+  /* Add media queries for responsiveness */
+  @media screen and (max-width: 600px) {
+      .main-container {
+          flex-direction: column;
+      }
+      .main-image{
+        display: none;
+      }
+  }
+  .sec{
+    width: 100%;
+    height: 350px;
+    background-color: whitesmoke;
+    margin-top: 220px;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 190px;
+  }
+  
+  .card-co {
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card-co img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .card-co h2 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .card-co p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .card-co button{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .card-co {
+      width: 100%; /* Cards take full width on smaller screens */
+    }
+  }
+  .centered-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; /* Make the container take the full viewport height */
+    font-family: 'Nunito', sans-serif;
+
+  }
+  
+  .centered-text h1 {
+    font-size: 30px;
+  }
+  
+  .centered-text p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .centered-text {
+      padding: 20px; /* Add some padding on smaller screens */
+    }
+  }
+  
+  /* new,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+  .card{
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    border: 1px solid white;
+    box-shadow: 5px 5px 15px whitesmoke;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.rating {
+display: inline-block;
+}
+
+.rating input {
+display: none;
+}
+
+.rating label {
+float: right;
+font-size: 24px;
+color: #f8ca00;
+cursor: pointer;
+}
+
+.rating label:before {
+content: "\2605"; /* Unicode star symbol */
+}
+
+.rating input:checked ~ label {
+color: #f8ca00; /* Color for the checked stars */
+}
+
+/* Optional: If you want to change the color on hover */
+.rating label:hover,
+.rating label:hover ~ label {
+color: #f8ca00;
+}
+.text{
+margin-left: 10px;
+}
+.text h4{
+font-size: 15px;
+margin-top: 0px;
+}
+.text h2{
+font-size: 20px;
+margin-top: 10px;
+}
+.rating{
+margin-top: px;
+}
+.text h3{
+margin-top: -5px;
+}
+.text img{
+float: right;
+margin-top: -40px;
+margin-right: 0px;
+}
+.image{
+
+}
+.card-con{
+margin-left: 60px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.center-container {
+text-align: center;
+}
+
+.centered-button {
+padding: 12px 24px;
+font-size: 16px;
+background-color: #007BFF;
+color: #fff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* Optional: Hover effect */
+.centered-button:hover {
+background-color: #0056b3;
+}
+@media screen and (min-width:768px) and (max-width:908px)
+{
+.card-con{
+transition: 0.2s;
+margin-left: 10px;
+}
+.card{
+width:200px ;
+
+}
+.text{
+margin-top: -20px;
+}
+.text h2{
+  font-size: 17px;
+  margin-top: 14px;
+}
+.image{
+margin-left: -10px;
+}
+.text img{
+margin-right:0px;
+}
+}
+@media screen and (max-width:768px){
+.card-con{
+margin-left: 10px;
+}
+}
+@media screen and (max-width:768px){
+.card-con{
+margin-left: 5px;
+}
+.card{
+}
+
+}
+@media screen and (max-width:300px){
+.image img{
+width: 150px;
+}
+.h2{
+font-size: smaller;
+}
+.text img{
+width: 50px;
+margin-top: -20px;
+margin-right: 5px;
+}
+}
+
+.center {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.responsive-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.responsive-button:hover {
+  background-color: #0056b3;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  
+  color: #050505;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.b-img{
+  width: 100%;
+  height: 250px;
+  border: 1px solid black;
+  margin-top: 20px;
+  background-image: url(img/mall\ \(3\).jpg);
+  background-position: center;
+  background-size: cover;
+}
+.info{
+  margin-top: 90px;
+  background-color: #777;
+  height: 300px;
+}
+.info-footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 0px;
+  cursor: pointer;
+
+}
+
+.info-footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+
+}
+
+.info-footer-column {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+
+}
+.info-footer-column h3{
+font-size: x-large;
+font-family: 'Nunito', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .info-footer-column {
+      width: 50%;
+  }
+  .info-footer-column img{
+      width:30px ;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-footer-column {
+      width: 100%;
+  }
+  .info-footer-column img{
+      width: 20px;
+  }
+}
+.copy-right {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .copy-right {
+      padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .copy-right {
+      font-size: 12px;
+  }
+}

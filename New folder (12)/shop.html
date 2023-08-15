@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+         a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+    text-transform:capitalize;
+  }
+  
+  /* nav styles */
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color:white ;
+    position: fixed;
+    width: 100%;
+    margin-top: -200px;
+    box-shadow: 0px 15px 20px whitesmoke;
+    font-family: 'Nunito', sans-serif;
+
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: black;
+    padding-left: 60px;
+  }
+  
+  .hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+  }
+  
+  .nav__link {
+    position: fixed;
+    width: 100%;
+    top: 5rem;
+    background-color: whitesmoke;
+  }
+  
+  .nav__link a {
+    display: block;
+    text-align: start;
+    padding: 10px 0;
+    transition: 0.5s ease;
+    margin-left: 15px;
+  
+  }
+  
+  .nav__link a:hover {
+    color: gray;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .nav__link {
+      display: block;
+      position: static;
+      width: auto;
+      margin-right: 20px;
+      background: none;
+    }
+  
+    .nav__link a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+    .logo {
+      margin-left: -30px;
+    }
+    
+  }
+  @media screen and (min-width: 1100px){
+    .logo{
+      margin-left: -30px;
+      transition: 0.2s;
+    }
+  }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  
+  color: #050505;
+  font-size: 16px;
+  /* font-size: 1.2rem; */
+    font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.box{
+    width: 100%;
+    height: 400px;
+    border: 1px solid black;
+    margin-top: 200px;
+    background-image: url(img/mall\ \(2\).jpg);
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    /* margin-top: 100px; */
+}
+.centered-text {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      /* Adjust font size for smaller screens */
+      .centered-text {
+        font-size: 18px;
+      }
+    }
+    .card{
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    border: 1px solid white;
+    box-shadow: 5px 5px 15px whitesmoke;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.rating {
+display: inline-block;
+}
+
+.rating input {
+display: none;
+}
+
+.rating label {
+float: right;
+font-size: 24px;
+color: #f8ca00;
+cursor: pointer;
+}
+
+.rating label:before {
+content: "\2605"; /* Unicode star symbol */
+}
+
+.rating input:checked ~ label {
+color: #f8ca00; /* Color for the checked stars */
+}
+
+/* Optional: If you want to change the color on hover */
+.rating label:hover,
+.rating label:hover ~ label {
+color: #f8ca00;
+}
+.text{
+margin-left: 10px;
+}
+.text h4{
+font-size: 15px;
+margin-top: 0px;
+}
+.text h2{
+font-size: 20px;
+margin-top: 10px;
+}
+.rating{
+margin-top: px;
+}
+.text h3{
+margin-top: -5px;
+}
+.text img{
+float: right;
+margin-top: -40px;
+margin-right: 0px;
+}
+.image{
+
+}
+.card-con{
+margin-left: 60px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-top: 80px;
+}
+.center-container {
+text-align: center;
+}
+
+.centered-button {
+padding: 12px 24px;
+font-size: 16px;
+background-color: #007BFF;
+color: #fff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* Optional: Hover effect */
+.centered-button:hover {
+background-color: #0056b3;
+}
+@media screen and (min-width:768px) and (max-width:908px)
+{
+.card-con{
+transition: 0.2s;
+margin-left: 10px;
+}
+.card{
+width:200px ;
+
+}
+.text{
+margin-top: -20px;
+}
+.text h2{
+   font-size: 17px;
+   margin-top: 14px;
+}
+.image{
+margin-left: -10px;
+}
+.text img{
+margin-right:0px;
+}
+}
+/* @media screen and (max-width:768px){
+.card-con{
+margin-left: 10px;
+}
+} */
+@media screen and (max-width:768px){
+.card-con{
+margin-left: 5px;
+}
+.card{
+}
+
+}
+@media screen and (max-width:300px){
+.image img{
+width: 150px;
+}
+.h2{
+font-size: smaller;
+}
+.text img{
+width: 50px;
+margin-top: -20px;
+margin-right: 5px;
+}
+}
+.info{
+  margin-top: 90px;
+  background-color: #777;
+  height: 300px;
+}
+.info-footer {
+  background-color: #131212;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 0px;
+  cursor: pointer;
+  height: 350px;
+
+}
+
+.info-footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  color:white;
+
+}
+
+.info-footer-column {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.info-footer-column h3{
+font-size: x-large;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+@media (max-width: 768px) {
+  .info-footer-column {
+      width: 50%;
+  }
+  .info-footer-column img{
+      width:30px ;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-footer-column {
+      width: 100%;
+  }
+  .info-footer-column img{
+      width: 20px;
+  }
+}
+.copy-right {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .copy-right {
+      padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .copy-right {
+      font-size: 12px;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+          <a href="/" class="logo">logo</a>
+          <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+  
+          <div class="nav__link hide">
+            <a href="home.html">Home</a>
+            <a href="#">Shop</a>
+
+            <div class="dropdown">
+
+                <button class="dropbtn">Pants </button>
+                <div class="dropdown-content">
+                    <a href="d-pent.html">Dress Pant</a>
+                    <a href="jeans.html">Jeans</a>
+                    <!-- <a href="#">Chinos</a> -->
+                </div>
+            </div>
+
+          
+          <a href="short.html">Shorts</a>
+
+          <div class="dropdown">
+            <button class="dropbtn">Shirts </button>
+            <div class="dropdown-content">
+                <a href="t-shirt.html">T-Shirt</a>
+                <a href="full.html">Full Seleves</a>
+                <!-- <a href="#">Casual Shit</a> -->
+            </div>
+        </div>
+            <a href="trouser.html">Trousers</a>
+            <div class="dropdown">
+            <button class="dropbtn">Shoes </button>
+            <div class="dropdown-content">
+                <a href="#">Joger</a>
+                <!-- <a href="#">Moze</a> -->
+                <a href="short.html">Sports</a>
+            </div>
+        </div>       
+             <a href="hoodie.html">Hoodies</a>
+            <a href="jacket.html">Jackets</a>
+            <div class="dropdown">
+            <button class="dropbtn">Accessrios </button>
+            <div class="dropdown-content">
+                <a href="#">Watch</a>
+                <a href="#">Chain</a>
+                <a href="#">Ring</a>
+            </div>
+        </div>            <a href="#">join</a>
+  
+          </div>
+        </nav>
+      </header>
+      <section class="box">
+
+
+      </section>
+      <!-- <div class="centered-text">
+        <p>Our Trending Product</p>
+      </div> -->
+   
+    <div class="centered-text">
+        <h1>Our Trending Product</h1>
+      </div>
+      <section>
+       <div class="card-con">
+          <div class="card">
+             <div class="image">
+              <img src="img/dress (1).jpeg" alt="" width="160px">
+             </div>
+             <div class="text">
+               <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+              <div class="rating">
+                  <input type="radio" name="rating" id="star5" value="5" />
+                  <label for="star5"></label>
+                  <input type="radio" name="rating" id="star4" value="4" />
+                  <label for="star4"></label>
+                  <input type="radio" name="rating" id="star3" value="3" />
+                  <label for="star3"></label>
+                  <input type="radio" name="rating" id="star2" value="2" />
+                  <label for="star2"></label>
+                  <input type="radio" name="rating" id="star1" value="1" />
+                  <label for="star1"></label>
+                </div>
+                <h3>1299pkr</h3>
+                <a href="dress.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+             </div>
+          </div>
+      
+          <div class="card">
+              <div class="image">
+               <img src="img/dress (2).jpeg" alt="" width="220px">
+              </div>
+              <div class="text">
+               <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+               <div class="rating">
+                   <input type="radio" name="rating" id="star5" value="5" />
+                   <label for="star5"></label>
+                   <input type="radio" name="rating" id="star4" value="4" />
+                   <label for="star4"></label>
+                   <input type="radio" name="rating" id="star3" value="3" />
+                   <label for="star3"></label>
+                   <input type="radio" name="rating" id="star2" value="2" />
+                   <label for="star2"></label>
+                   <input type="radio" name="rating" id="star1" value="1" />
+                   <label for="star1"></label>
+                 </div>
+                 <h3>1299pkr</h3>
+                 <a href="2nd.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+              </div>
+           </div>
+      
+           <div class="card">
+              <div class="image">
+               <img src="img/dress (3).jpeg" alt="" width="160px">
+              </div>
+              <div class="text">
+               <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+               <div class="rating">
+                   <input type="radio" name="rating" id="star5" value="5" />
+                   <label for="star5"></label>
+                   <input type="radio" name="rating" id="star4" value="4" />
+                   <label for="star4"></label>
+                   <input type="radio" name="rating" id="star3" value="3" />
+                   <label for="star3"></label>
+                   <input type="radio" name="rating" id="star2" value="2" />
+                   <label for="star2"></label>
+                   <input type="radio" name="rating" id="star1" value="1" />
+                   <label for="star1"></label>
+                 </div>
+                 <h3>1299pkr</h3>
+                 <a href="3rd.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+              </div>
+           </div>
+      
+           <div class="card">
+              <div class="image">
+               <img src="img/dress (4).jpeg" alt="" width="200px">
+              </div>
+              <div class="text">
+               <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+               <div class="rating">
+                   <input type="radio" name="rating" id="star5" value="5" />
+                   <label for="star5"></label>
+                   <input type="radio" name="rating" id="star4" value="4" />
+                   <label for="star4"></label>
+                   <input type="radio" name="rating" id="star3" value="3" />
+                   <label for="star3"></label>
+                   <input type="radio" name="rating" id="star2" value="2" />
+                   <label for="star2"></label>
+                   <input type="radio" name="rating" id="star1" value="1" />
+                   <label for="star1"></label>
+                 </div>
+                 <h3>1299pkr</h3>
+                 <a href="4th.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+              </div>
+           </div>
+      
+           <div class="card">
+              <div class="image">
+               <img src="img/dress (5).jpeg" alt="" width="160px">
+              </div>
+              <div class="text">
+               <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+               <div class="rating">
+                   <input type="radio" name="rating" id="star5" value="5" />
+                   <label for="star5"></label>
+                   <input type="radio" name="rating" id="star4" value="4" />
+                   <label for="star4"></label>
+                   <input type="radio" name="rating" id="star3" value="3" />
+                   <label for="star3"></label>
+                   <input type="radio" name="rating" id="star2" value="2" />
+                   <label for="star2"></label>
+                   <input type="radio" name="rating" id="star1" value="1" />
+                   <label for="star1"></label>
+                 </div>
+                 <h3>1299pkr</h3>
+                 <a href="5t.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+              </div>
+           </div>
+      
+           <div class="card">
+              <div class="image">
+               <img src="img/dress (6).jpeg" alt="" width="160px">
+              </div>
+              <div class="text">
+               <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+               <div class="rating">
+                   <input type="radio" name="rating" id="star5" value="5" />
+                   <label for="star5"></label>
+                   <input type="radio" name="rating" id="star4" value="4" />
+                   <label for="star4"></label>
+                   <input type="radio" name="rating" id="star3" value="3" />
+                   <label for="star3"></label>
+                   <input type="radio" name="rating" id="star2" value="2" />
+                   <label for="star2"></label>
+                   <input type="radio" name="rating" id="star1" value="1" />
+                   <label for="star1"></label>
+                 </div>
+                 <h3>1299pkr</h3>
+                 <a href="6th.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+              </div>
+           </div>
+      
+          
+      
+           <div class="card">
+              <div class="image">
+               <img src="img/dress (7).jpeg" alt="" width="220px">
+              </div>
+              <div class="text">
+               <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+               <div class="rating">
+                   <input type="radio" name="rating" id="star5" value="5" />
+                   <label for="star5"></label>
+                   <input type="radio" name="rating" id="star4" value="4" />
+                   <label for="star4"></label>
+                   <input type="radio" name="rating" id="star3" value="3" />
+                   <label for="star3"></label>
+                   <input type="radio" name="rating" id="star2" value="2" />
+                   <label for="star2"></label>
+                   <input type="radio" name="rating" id="star1" value="1" />
+                   <label for="star1"></label>
+                 </div>
+                 <h3>1299pkr</h3>
+                 <a href="7th.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+              </div>
+           </div>
+      
+           <div class="card">
+              <div class="image">
+               <img src="img/dress (8).jpeg" alt="" width="220px">
+              </div>
+              <div class="text">
+               <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+               <div class="rating">
+                   <input type="radio" name="rating" id="star5" value="5" />
+                   <label for="star5"></label>
+                   <input type="radio" name="rating" id="star4" value="4" />
+                   <label for="star4"></label>
+                   <input type="radio" name="rating" id="star3" value="3" />
+                   <label for="star3"></label>
+                   <input type="radio" name="rating" id="star2" value="2" />
+                   <label for="star2"></label>
+                   <input type="radio" name="rating" id="star1" value="1" />
+                   <label for="star1"></label>
+                 </div>
+                 <h3>1299pkr</h3>
+                 <a href="8th.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+              </div>
+           </div>
+         </div>
+
+         <div class="card-con">
+            <div class="card">
+               <div class="image">
+                <img src="img/dress (9).jpeg" alt="" width="210px">
+               </div>
+               <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="9th.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+        
+            <div class="card">
+                <div class="image">
+                 <img src="img/dress (10).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="10th.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/dress (12).jpeg" alt="" width="200px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="12.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/dress (13).jpeg" alt="" width="140px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1399pkr</h3>
+                   <a href="13.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/dress (14).jpeg" alt="" width="145px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="14th.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/dress (15).jpeg" alt="" width="200px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="15.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+            
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/dress (16).jpeg" alt="" width="200px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="16.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/dress (17).jpeg" alt="" width="150px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="17.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+           </div>
+
+           <div class="card-con">
+            <div class="card">
+               <div class="image">
+                <img src="img/dress (18).jpeg" alt="" width="190px">
+               </div>
+               <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="18.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+        
+            <div class="card">
+                <div class="image">
+                 <img src="img/dress (19).jpeg" alt="" width="210px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="19.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/dress (20).jpeg" alt="" width="190px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="20.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/dress (21).jpeg" alt="" width="150px">
+                </div>
+                <div class="text">
+                  <h2>Men's High Waist Versatile Business Dress Pents</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>199pkr</h3>
+                   <a href="21.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        <!-- ..........jeans...... -->
+             <div class="card">
+                <div class="image">
+                 <img src="img/j (1).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h2>Slim Cropped Denim Pant</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="21.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                  <img src="img/fj (1).jpeg" alt="" width="160px">
+               </div>
+                <div class="text">
+                  <h2>Slim Cropped Denim Pant</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="22.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+            
+        
+             <div class="card">
+                <div class="image">
+                  <img src="img/fj (2).jpeg" alt="" width="160px">
+               </div>
+                <div class="text">
+                  <h2>Slim Cropped Denim Pant</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="23.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                  <img src="img/j (2).jpeg" alt="" width="160px">
+               </div>
+                <div class="text">
+                  <h2>Slim Cropped Denim Pant</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="24.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+           </div>
+
+           <div class="card-con">
+            <div class="card">
+               <div class="image">
+                  <img src="img/j (3).jpeg" alt="" width="160px">
+               </div>
+               <div class="text">
+                  <h2>Slim Cropped Denim Pant</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="25.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+        
+            <div class="card">
+                <div class="image">
+                  <img src="img/j (4).jpeg" alt="" width="160px">
+               </div>
+                <div class="text">
+                  <h2>Slim Cropped Denim Pant</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="26.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                  <img src="img/j (5).jpeg" alt="" width="160px">
+               </div>
+                <div class="text">
+                  <h2>Slim Cropped Denim Pant</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="27.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                  <img src="img/j (6).jpeg" alt="" width="160px">
+               </div>
+                <div class="text">
+                  <h2>Slim Cropped Denim Pant</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="28.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+
+
+             <!-- .....trouser......... -->
+
+             <div class="card">
+               <div class="image">
+                <img src="img/trouser (1).jpeg" alt="" width="140px">
+               </div>
+               <div class="text">
+                <h2>Regular Fit Graphic Slim Fit <br> Trouser</h2>
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1499pkr</h3>
+                  <a href="76.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+       
+            <div class="card">
+               <div class="image">
+                 <img src="img/trouser (2).jpeg" alt="" width="140px">
+              </div>
+               <div class="text">
+                  <h2>Regular Fit Graphic Slim Fit <br> Trouser</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="77.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+       
+           
+       
+            <div class="card">
+               <div class="image">
+                 <img src="img/t3.jpeg" alt="" width="140px">
+              </div>
+               <div class="text">
+                  <h2>Regular Fit Graphic Slim Fit <br> Trouser</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="78.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+       
+            <div class="card">
+               <div class="image">
+                 <img src="img/trouser (4).jpeg" alt="" width="170px">
+              </div>
+               <div class="text">
+                  <h2>Regular Fit Graphic Slim Fit <br> Trouser</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="79.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+          </div>
+
+          <div class="card-con">
+           <div class="card">
+              <div class="image">
+                 <img src="img/trouser (5).jpeg" alt="" width="140px">
+              </div>
+              <div class="text">
+               <h2>Regular Fit Graphic Slim Fit <br> Trouser</h2>
+
+               <div class="rating">
+                   <input type="radio" name="rating" id="star5" value="5" />
+                   <label for="star5"></label>
+                   <input type="radio" name="rating" id="star4" value="4" />
+                   <label for="star4"></label>
+                   <input type="radio" name="rating" id="star3" value="3" />
+                   <label for="star3"></label>
+                   <input type="radio" name="rating" id="star2" value="2" />
+                   <label for="star2"></label>
+                   <input type="radio" name="rating" id="star1" value="1" />
+                   <label for="star1"></label>
+                 </div>
+                 <h3>1299pkr</h3>
+                 <a href="80.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+              </div>
+           </div>
+       
+           <div class="card">
+               <div class="image">
+                 <img src="img/trouser (6).jpeg" alt="" width="140px">
+              </div>
+               <div class="text">
+                  <h2>Regular Fit Graphic Slim Fit <br> Trouser</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="81.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+       
+            <div class="card">
+               <div class="image">
+                 <img src="img/trouser (7).jpeg" alt="" width="140px">
+              </div>
+               <div class="text">
+                  <h2>Regular Fit Graphic Slim Fit <br> Trouser</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="82.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+       
+            <div class="card">
+               <div class="image">
+                 <img src="img/trouser (8).jpeg" alt="" width="140px">
+              </div>
+               <div class="text">
+                  <h2>Regular Fit Graphic Slim Fit <br> Trouser</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="83.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+             <!-- .........jaket......... -->
+
+             <div class="card">
+               <div class="image">
+                 <img src="img/jaket (1).jpeg" alt="" width="200px">
+              </div>
+               <div class="text">
+                <h2>Denim Jacket</h2>
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="29.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (2).jpeg" alt="" width="145px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="30.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (3).jpeg" alt="" width="190px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="31.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (4).jpeg" alt="" width="170px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="32.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (5).jpeg" alt="" width="170px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="33.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (6).jpeg" alt="" width="190px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="34.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (7).jpeg" alt="" width="200px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="35.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (8).jpeg" alt="" width="190px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="36.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (9).jpeg" alt="" width="140px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="37.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (10).jpeg" alt="" width="190px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="38.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket (11).jpeg" alt="" width="170px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="39.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="img/jaket.jpeg" alt="" width="200px">
+               </div>
+               <div class="text">
+                  <h2>Denim Jacket</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="40.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <!-- ......hodies..... -->
+            
+            <div class="card">
+               <div class="image">
+                  <img src="img/hodies (1).jpeg" alt="" width="160px">
+               </div>
+               <div class="text">
+                <h2>Hodies</h2>
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="49.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/hodies (2).jpeg" alt="" width="165px">
+               </div>
+               <div class="text">
+                  <h2>Hodies</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="50.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/hodies (3).jpeg" alt="" width="160px">
+               </div>
+               <div class="text">
+                  <h2>Hodies</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="51.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/hodies (4).jpeg" alt="" width="160px">
+               </div>
+               <div class="text">
+                  <h2>Hodies</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="52.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="image">
+                  <img src="img/hodies (5).jpeg" alt="" width="160px">
+               </div>
+               <div class="text">
+                  <h2>Hodies</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="53.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="img/hodies (6).jpeg" alt="" width="160px">
+               </div>
+               <div class="text">
+                  <h2>Hodies</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="54.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="img/hodies (7).jpeg" alt="" width="140px">
+               </div>
+               <div class="text">
+                  <h2>Hodies</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="55.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="img/hodies (9).jpeg" alt="" width="160px">
+               </div>
+               <div class="text">
+                  <h2>Hodies</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="56.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+            
+                     <!-- ..........short........ -->
+
+             <div class="card">
+                <div class="image">
+                 <img src="img/shorts (3).jpeg" alt="" width="140px">
+                </div>
+                <div class="text">
+                 <h2>Shorts</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="41.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/shorts (1).jpeg" alt="" width="140px">
+                </div>
+                <div class="text">
+                  <h2>Shorts</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="42.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+            
+             <div class="card">
+                <div class="image">
+                 <img src="img/shorts (1).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                  <h2>Shorts</h2>
+                  
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="43.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                  <img src="img/shorts (7).jpeg" alt="" width="160px">
+               </div>
+                <div class="text">
+                  <h2>Shorts</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>99pkr</h3>
+                   <a href="44.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+           </div>
+
+           <div class="card-con">
+            <div class="card">
+               <div class="image">
+                <img src="img/shorts (4).jpeg" alt="" width="140px">
+               </div>
+               <div class="text">
+                  <h2>Shorts</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="45.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+        
+            <div class="card">
+                <div class="image">
+                 <img src="img/shorts (5).jpeg" alt="" width="140px">
+                </div>
+                <div class="text">
+                  <h2>Shorts</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="46.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/shorts (6).jpeg" alt="" width="190px">
+                </div>
+                <div class="text">
+                  <h2>Shorts</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="47.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/shorts (7).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                  <h2>Shorts</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="48.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+
+
+             <!-- ..........t-shirt......... -->
+             <div class="card">
+                <div class="image">
+                 <img src="img/t-shirt (1).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="59.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/t-shirt (2).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="60.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+            
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/t-shirt (3).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="61.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/t-shirt (4).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="62.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+           </div>
+
+           <div class="card-con">
+            <div class="card">
+               <div class="image">
+                <img src="img/t-shirt (5).jpeg" alt="" width="160px">
+               </div>
+               <div class="text">
+                <h4>Addidas</h4>
+                <h2>Cartoon Astronaut T-Shirt</h2>
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="63.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+        
+            <div class="card">
+                <div class="image">
+                 <img src="img/b.png" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="64.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+
+             <div class="card">
+                <div class="image">
+                 <img src="img/b2.png" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="65.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+
+             <div class="card">
+                <div class="image">
+                 <img src="img/b3.png" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="66.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (3).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h2>Stiped Button Down Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="67.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (4).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                  <h2>Stiped Button Down Shirt</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="68.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+            
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (5).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                  <h2>Stiped Button Down Shirt</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="69.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (6).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                  <h2>Stiped Button Down Shirt</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="70.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+           </div>
+
+           <div class="card-con">
+            <div class="card">
+               <div class="image">
+                <img src="img/full sleve (7).jpeg" alt="" width="130px">
+               </div>
+               <div class="text">
+                  <h2>Men's Cotton Formal Shirt</h2>
+
+                <div class="rating">
+                    <input type="radio" name="rating" id="star5" value="5" />
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4" />
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3" />
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2" />
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1" />
+                    <label for="star1"></label>
+                  </div>
+                  <h3>1299pkr</h3>
+                  <a href="71.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+               </div>
+            </div>
+        
+            <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (9).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                  <h2>Men's Cotton Formal Shirt</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="73.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (10).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                  <h2>Men's Cotton Formal Shirt</h2>
+
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="74.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (11).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h2>Men's Cotton Formal Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="75.html"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+<!--         
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (12).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="#"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (13).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="#"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+            
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (14).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>1299pkr</h3>
+                   <a href="#"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div>
+        
+             <div class="card">
+                <div class="image">
+                 <img src="img/full sleve (15).jpeg" alt="" width="160px">
+                </div>
+                <div class="text">
+                 <h4>Addidas</h4>
+                 <h2>Cartoon Astronaut T-Shirt</h2>
+                 <div class="rating">
+                     <input type="radio" name="rating" id="star5" value="5" />
+                     <label for="star5"></label>
+                     <input type="radio" name="rating" id="star4" value="4" />
+                     <label for="star4"></label>
+                     <input type="radio" name="rating" id="star3" value="3" />
+                     <label for="star3"></label>
+                     <input type="radio" name="rating" id="star2" value="2" />
+                     <label for="star2"></label>
+                     <input type="radio" name="rating" id="star1" value="1" />
+                     <label for="star1"></label>
+                   </div>
+                   <h3>299pkr</h3>
+                   <a href="#"> <img src="img/system-solid-6-shopping.gif" alt="" width="60px"></a>
+                </div>
+             </div> -->
+           </div>
+      </section>
+      <section>
+         <!-- ///////////////////// -->
+         <footer class="info-footer">
+          <div class="info-footer-columns">
+              <div class="info-footer-column">
+                  <h3>House</h3>
+                  <p>HOME</p>
+                  <p>About us</p>
+                  <p>Service</p>
+                  <p>Sign Up</p>
+              </div>
+              <div class="info-footer-column">
+                  <h3>Useful Links</h3>
+                  <p>Your Account</p>
+                  <p>Become an Affiliate</p>
+                  <p>Help</p>
+              </div>
+              <div class="info-footer-column">
+                  <h3>Address</h3>
+        <p>Phone:03494699253</p>
+                  <p>Gujranwala Pakistan</p>
+                  <p>yourhouse@gmail.com</p>
+              </div>
+              <div class="info-footer-column">
+                  <h3>Follow Us</h3>
+            <img src="img/wa.gif" alt="" width="35px">   
+            <img src="img/insta.gif" alt=""  width="35px">    
+            <img src="img/facebook.gif" alt="" width="35px">    
+            <img src="img/tik tok.gif" alt=""  width="35px"> 
+              </div>
+          </div>
+      </footer>
+           </section>
+           <section>
+            <div class="copy-right">
+              <p>&copy; 2023 Your Company. All rights reserved.</p>
+          </div>
+           </section>
+</body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLink = document.querySelector('.nav__link');
+// YE DYNAMICALLY (MEANS RUN TIME PY) EVENT LAGANY KA TREEQA HY
+    hamburger.addEventListener('click', () => {
+     navLink.classList.toggle('hide');// TOOGLE YAHA HIDE CLASS KO ON YA OFF KRNY K LIYE USE KIA HY
+    });
+  </script>
+</html>

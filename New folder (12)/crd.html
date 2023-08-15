@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+.image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+    </style>
+</head>
+<body>
+    <div class="gallery" id="gallery">
+        <div class="image" draggable="true">
+          <img src="img/dress (1).jpeg" alt="Image 1">
+        </div>
+        <div class="image" draggable="true">
+          <img src="img/dress (2).jpeg" alt="Image 2">
+        </div>
+        <div class="image" draggable="true">
+          <img src="img/dress (4).jpeg" alt="Image 3">
+        </div>
+        <!-- Add more images here -->
+      </div>
+    
+      <script src="script.js"></script>
+</body>
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const gallery = document.getElementById("gallery");
+  let draggedItem = null;
+
+  // Add event listeners to make images draggable
+  const images = gallery.querySelectorAll(".image");
+  images.forEach(image => {
+    image.addEventListener("dragstart", dragStart);
+    image.addEventListener("dragover", dragOver);
+    image.addEventListener("drop", drop);
+    image.addEventListener("dragend", dragEnd);
+  });
+
+  function dragStart(event) {
+    draggedItem = this;
+    setTimeout(() => {
+      this.style.display = "none";
+    }, 0);
+  }
+
+  function dragOver(event) {
+    event.preventDefault();
+  }
+
+  function drop(event) {
+    event.preventDefault();
+    this.style.display = "block";
+    if (draggedItem !== this) {
+      const rectDragged = draggedItem.getBoundingClientRect();
+      const rectDropped = this.getBoundingClientRect();
+      if (event.clientY > (rectDropped.top + rectDropped.height / 2)) {
+        this.parentNode.insertBefore(draggedItem, this.nextSibling);
+      } else {
+        this.parentNode.insertBefore(draggedItem, this);
+      }
+    }
+  }
+
+  function dragEnd() {
+    draggedItem = null;
+  }
+});
+
+</script>
+</html>

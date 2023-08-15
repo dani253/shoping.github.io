@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .centered-text {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      /* Adjust font size for smaller screens */
+      .centered-text {
+        font-size: 18px;
+      }
+    }
+    .button-group {
+  display: flex;
+}
+
+.selector-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.selector-btn.active {
+  background-color:rgb(14, 13, 10);
+  color: #fff;
+}
+.n input{
+    width: 30px;
+    height: 35px;
+    margin-top: 10px;
+    float: left;
+}
+.add {
+    width: 50px;
+    height:40px;
+   margin-left: 10px;
+   margin-top: 10px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+ button:hover{
+   background-color: black;
+   color: white;
+}
+.img-box{
+    float: left;
+}
+.text{
+    float: left;
+    margin-left: 40px;
+}
+.p{
+    font-size: 30px;
+}
+p{
+    font-size: 20px;
+}
+
+@media (max-width: 820px) {
+  .main-img img{
+    width:100%;
+  }
+  .small-con img{
+    /* width: 122px; */
+  }
+  h1{
+    font-size: 25px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  .p{
+    font-size: 25px;
+  }
+  p{
+    font-size: 18px;
+  }
+  .text{
+    margin-left: 10px;
+  }
+}
+@media (max-width: 668px) {
+  .main-img img{
+    width: 100%;
+  }
+  .small-con img{
+    width: 24%;
+  }
+  h1{
+    font-size: 20px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  .p{
+    font-size: 15px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .button-group button{
+   
+  
+}
+}
+    </style>
+</head>
+<body>
+    <div class="centered-text">
+        <p>Our Trending Product</p>
+      </div>
+    
+    <section class="img-box">
+        <div class="main-img">
+            <img id="img-box" src="img/trouser (8).jpeg" alt="" width="630px" >
+         </div>
+          <!-- <div class="con">
+           <div class="small-con">
+             <img src="img/jaket (6).jpeg" alt="" onclick="change(this)" width="155px">
+             <img src="img/jaket (1).jpeg" alt="" onclick="change(this)" width="155px"> -->
+
+    
+             <!-- <img src="img/jaket (3).jpeg" alt="" onclick="change(this)"  width="155px" >
+             <img src="img/jaket (4).jpeg" alt=""  onclick="change(this)"  width="155px">
+             <img src="img/jaket (5).jpeg" alt=""  onclick="change(this)"  width="155px">
+     -->
+             
+           </div>    
+        </div>              
+    </section>
+        <div class="text">
+           <h3>Trouser</h3> 
+          <h1>Best Collection For Summer</h1>
+           <h3>1699pkr</h3>
+           <div class="s">
+           <h3>Waist</h3>
+         
+        <section class="select">
+            <div class="button-group">
+                <button class="selector-btn" onclick="selectButton(1)">32</button>
+                <button class="selector-btn" onclick="selectButton(2)">34</button>
+                <button class="selector-btn" onclick="selectButton(3)">36</button>
+                <button class="selector-btn" onclick="selectButton(4)">38</button>
+                <button class="selector-btn" onclick="selectButton(5)">40</button>
+              </div>
+        </section>
+<div class="n">
+    <input type="number" >
+
+</div>
+           <button class="add">Buy</button>
+           <h2 class="p">Product Details</h2>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Dolorum quia amet maiores officiis nam aspernatur <br> quod molestias? Neque quod obcaecati doloremque dolores officia,<br> magnam velit veniam, corrupti itaque ut perspiciatis.</p>
+        </div> 
+       
+</body>
+<script>
+   let activeButton = 1; // Set the default active button here
+
+function selectButton(buttonNumber) {
+  // Remove the active class from the current active button
+  const prevActiveButton = document.querySelector('.selector-btn.active');
+  if (prevActiveButton) {
+    prevActiveButton.classList.remove('active');
+  }
+
+  // Set the new active button
+  const newActiveButton = document.querySelector(`.selector-btn:nth-child(${buttonNumber})`);
+  newActiveButton.classList.add('active');
+  activeButton = buttonNumber; // Update the active button number
+}
+
+
+</script>
+<script>
+  function change(smallimg)
+  {
+    var fullimg = document.getElementById("img-box");
+    fullimg.src = smallimg.src;
+  }
+</script>
+</body>
+</html>
